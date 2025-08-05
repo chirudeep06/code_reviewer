@@ -1,0 +1,35 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Code Reviewer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 AI Code Reviewer</h1>
+    <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+    <button id="analyzeBtn">Analyze</button>
+    
+    <div id="loader" style="display: none;">🔍 Analyzing your code...</div>
+    <div id="reviewContainer"></div>
+
+    <div class="feedback">
+      <p>🗳️ Was this review helpful?</p>
+      <button id="acceptBtn">👍 Accept</button>
+      <button id="rejectBtn">👎 Reject</button>
+      <textarea id="rejectionReason" placeholder="Tell us why..." style="display:none;"></textarea>
+      <button id="submitRejection" style="display:none;">Submit Rejection</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
